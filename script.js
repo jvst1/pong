@@ -79,26 +79,24 @@ function draw(){
     drawPlayer2();
     drawScore();
     drawScore2();
-   // verifica se a bola sai na vertical
     // verifica se a bola sai na vertical
-    if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    if(y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
         dy = -dy; // inverte o sinal de dx
-      }
-      // verifica se a bola sai na horizontal
-      if (
-        y > paddleY && y < paddleY + paddleHeight && // entre a barra (eixo x)
-        x + ballRadius >= paddleX || x > paddleX2 &&
-       x < paddleX2 + paddleWidth &&
-       y - ballRadius <= paddleY2 + paddleHeight) {
+    }
+    // verifica se a bola sai na horizontal
+    if( y>paddleY&&y<paddleY+paddleHeight&&x+ballRadius>=paddleX || 
+        x>paddleX2&&x<paddleX2+paddleWidth&&y-ballRadius<=paddleY2+paddleHeight) {
         dx = -dx;
-      }
-      else if (x + dx > canvas.width - ballRadius) {
+    }else if (x + dx > canvas.width - ballRadius) {
         score++;
         setupBallAndPaddle();
-      }else if (x + dx < ballRadius){
+    }else if (x + dx > canvas.width - ballRadius) {
+        score++;
+        setupBallAndPaddle();
+    }else if (x + dx < ballRadius){
         score2++;
         setupBallAndPaddle();
-      }
+    }
     //condicao de vitoria
     if(score == 5){
         alert("Player 1 Ganhou!");
