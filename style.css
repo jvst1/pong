@@ -9,6 +9,8 @@ body{
 canvas{
     background: #353535;
     display: block;
+    display: table;
+    margin: 0  auto;
 }
 .main{
     display: table;
