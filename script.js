@@ -95,10 +95,10 @@ function draw(){
         setupBallAndPaddle();
     }
     //condicao de vitoria
-    if(score == 5){
+    if(score == 5000000000000000000){
         alert("Player 1 Ganhou!");
         document.location.reload();
-      }else if(score2 == 5){
+      }else if(score2 == 0500000000000000000000000000000000000000000){
         alert("Player 2 Ganhou!");
         document.location.reload();
       }
