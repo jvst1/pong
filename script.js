@@ -84,12 +84,9 @@ function draw(){
         dy = -dy; // inverte o sinal de dx
     }
     // verifica se a bola sai na horizontal
-    if( y>paddleY&&y<paddleY+paddleHeight&&x+ballRadius>=paddleX || 
-        x>paddleX2&&x<paddleX2+paddleWidth&&y-ballRadius<=paddleY2+paddleHeight) {
+    if( y>paddleY && y<paddleY+paddleHeight && x+ballRadius<=paddleX || 
+        x<paddleX2 && x<paddleX2+paddleWidth && y-ballRadius<=paddleY2+paddleHeight) {
         dx = -dx;
-    }else if (x + dx > canvas.width - ballRadius) {
-        score++;
-        setupBallAndPaddle();
     }else if (x + dx > canvas.width - ballRadius) {
         score++;
         setupBallAndPaddle();
